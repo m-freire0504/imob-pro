@@ -1,4 +1,4 @@
-import { int, mysqlEnum, mysqlTable, text, timestamp, varchar } from "drizzle-orm/mysql-core";
+import { int, mysqlEnum, mysqlTable, text, timestamp, varchar, boolean } from "drizzle-orm/mysql-core";
 
 /**
  * Core user table backing auth flow.
@@ -45,11 +45,9 @@ export type InsertProprietario = typeof proprietarios.$inferInsert;
 export const inquilinos = mysqlTable("inquilinos", {
   id: int("id").autoincrement().primaryKey(),
   nome: varchar("nome", { length: 255 }).notNull(),
-  cpf: varchar("cpf", { length: 14 }).notNull().unique(),
-  telefone: varchar("telefone", { length: 20 }),
   email: varchar("email", { length: 320 }),
-  endereco: text("endereco"),
-  observacoes: text("observacoes"),
+  telefone: varchar("telefone", { length: 20 }),
+  cpf: varchar("cpf", { length: 14 }).unique(),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
 });
@@ -103,19 +101,36 @@ export const corretores = mysqlTable("corretores", {
   cpf: varchar("cpf", { length: 14 }).notNull().unique(),
   creci: varchar("creci", { length: 50 }).notNull(),
   telefone: varchar("telefone", { length: 20 }),
-  email: varchar("email", { length: 320 }),
+  email: varchar("email", { length: 320 }).notNull().unique(),
   equipe: varchar("equipe", { length: 100 }),
   gerenteId: int("gerenteId"),
   metaVendas: int("metaVendas").default(0),
   metaLocacoes: int("metaLocacoes").default(0),
   metaCaptacoes: int("metaCaptacoes").default(0),
-  ativo: int("ativo").default(1).notNull(), // 0 ou 1 (boolean)
+  senhaHash: varchar("senhaHash", { length: 255 }),
+  senhaTemporaria: boolean("senhaTemporaria").default(false).notNull(),
+  ativo: boolean("ativo").default(true).notNull(),
+  ultimoAcesso: timestamp("ultimoAcesso"),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
 });
 
 export type Corretor = typeof corretores.$inferSelect;
 export type InsertCorretor = typeof corretores.$inferInsert;
+
+// Tabela de auditoria de login
+export const loginAudit = mysqlTable("loginAudit", {
+  id: int("id").autoincrement().primaryKey(),
+  corretorId: int("corretorId").notNull().references(() => corretores.id),
+  email: varchar("email", { length: 320 }).notNull(),
+  sucesso: boolean("sucesso").notNull(),
+  motivo: varchar("motivo", { length: 255 }),
+  ipAddress: varchar("ipAddress", { length: 45 }),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type LoginAudit = typeof loginAudit.$inferSelect;
+export type InsertLoginAudit = typeof loginAudit.$inferInsert;
 
 // Imóveis
 export const imoveis = mysqlTable("imoveis", {

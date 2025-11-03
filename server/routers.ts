@@ -192,13 +192,13 @@ export const appRouter = router({
       cpf: z.string(),
       creci: z.string(),
       telefone: z.string().optional(),
-      email: z.string().optional(),
+      email: z.string(),
       equipe: z.string().optional(),
       gerenteId: z.number().optional(),
       metaVendas: z.number().optional(),
       metaLocacoes: z.number().optional(),
       metaCaptacoes: z.number().optional(),
-      ativo: z.number().optional(),
+      ativo: z.boolean().optional(),
     })).mutation(async ({ input }) => {
       return await db.createCorretor(input);
     }),
@@ -214,7 +214,7 @@ export const appRouter = router({
       metaVendas: z.number().optional(),
       metaLocacoes: z.number().optional(),
       metaCaptacoes: z.number().optional(),
-      ativo: z.number().optional(),
+      ativo: z.boolean().optional(),
     })).mutation(async ({ input }) => {
       const { id, ...data } = input;
       await db.updateCorretor(id, data);

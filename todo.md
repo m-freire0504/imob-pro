@@ -108,6 +108,22 @@
 - [ ] Mensagens de erro amigáveis
 - [ ] Confirmação de exclusão
 
+## Autenticação de Corretores
+- [x] Schema com campos de senha e senha temporária
+- [x] Utilitários de criptografia (bcrypt)
+- [x] Página de login para corretores
+- [x] Página de alteração obrigatória de senha
+- [x] Rotas de autenticação no servidor
+- [x] Auditoria de login
+- [ ] Integração com sistema de email para envio de credenciais
+- [ ] Recuperação de senha
+
+## Controle de Acesso por Perfil
+- [ ] Middleware de autorização nos procedures tRPC
+- [ ] Dashboard personalizado por perfil (Admin/Gerente/Corretor/Proprietário)
+- [ ] Filtros automáticos baseados no usuário logado
+- [ ] Restrição de acesso a dados sensíveis
+
 ## Infraestrutura e Design
 - [x] Estrutura do banco de dados
 - [x] Sistema de autenticação com níveis de permissão
