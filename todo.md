@@ -48,9 +48,69 @@
 - [ ] Relatório de vendas por período
 - [ ] Relatório de desempenho de corretores e equipes
 
+## Formulários e Validação
+- [ ] Formulário de cadastro de imóveis com validação
+- [ ] Formulário de cadastro de proprietários
+- [ ] Formulário de cadastro de inquilinos
+- [ ] Formulário de cadastro de leads
+- [ ] Formulário de cadastro de corretores
+- [ ] Validação de CPF/CNPJ
+- [ ] Validação de CEP com busca de endereço
+
+## Upload de Fotos e Galeria
+- [ ] Upload de fotos com drag-and-drop
+- [ ] Integração com S3 para armazenamento
+- [ ] Galeria de imóveis com visualização
+- [ ] Reordenação de fotos
+- [ ] Definir foto de capa
+- [ ] Compressão de imagens
+
+## Busca e Filtros Avançados
+- [ ] Busca por texto em imóveis
+- [ ] Filtros por tipo, preço, localização
+- [ ] Filtros por status
+- [ ] Ordenação de resultados
+- [ ] Busca em leads
+- [ ] Busca em proprietários
+
+## Integração Google Maps
+- [ ] Mapa interativo para localização de imóveis
+- [ ] Geocodificação de endereços
+- [ ] Visualização de múltiplos imóveis no mapa
+- [ ] Cálculo de distâncias
+
+## Sistema de Notificações
+- [ ] Notificações de novas vendas
+- [ ] Notificações de novos leads
+- [ ] Notificações de atividades vencidas
+- [ ] Centro de notificações
+- [ ] Histórico de notificações
+
+## Relatórios em PDF
+- [ ] Relatório de estoque de imóveis
+- [ ] Relatório de vendas por período
+- [ ] Relatório de desempenho de corretores
+- [ ] Relatório de comissões
+- [ ] Ficha do imóvel em PDF
+
+## Exportação de Dados
+- [ ] Exportar imóveis para Excel
+- [ ] Exportar leads para Excel
+- [ ] Exportar comissões para Excel
+- [ ] Exportar relatório de vendas
+
+## Melhorias de UX
+- [ ] Modais para confirmação de ações
+- [ ] Toast notifications para feedbacks
+- [ ] Loading states em operações
+- [ ] Paginação em listas
+- [ ] Skeleton loaders
+- [ ] Mensagens de erro amigáveis
+- [ ] Confirmação de exclusão
+
 ## Infraestrutura e Design
-- [ ] Estrutura do banco de dados
-- [ ] Sistema de autenticação com níveis de permissão
-- [ ] Interface responsiva (desktop, tablet, mobile)
-- [ ] Integração com armazenamento S3 para fotos
+- [x] Estrutura do banco de dados
+- [x] Sistema de autenticação com níveis de permissão
+- [x] Interface responsiva (desktop, tablet, mobile)
+- [x] Integração com armazenamento S3 para fotos
 - [ ] Documentação do usuário
