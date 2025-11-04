@@ -49,11 +49,11 @@
 - [ ] Relatório de desempenho de corretores e equipes
 
 ## Formulários e Validação
-- [ ] Formulário de cadastro de imóveis com validação
+- [x] Formulário de cadastro de imóveis com validação
 - [ ] Formulário de cadastro de proprietários
 - [ ] Formulário de cadastro de inquilinos
-- [ ] Formulário de cadastro de leads
-- [ ] Formulário de cadastro de corretores
+- [x] Formulário de cadastro de leads
+- [x] Formulário de cadastro de corretores
 - [ ] Validação de CPF/CNPJ
 - [ ] Validação de CEP com busca de endereço
 
@@ -119,10 +119,25 @@
 - [ ] Recuperação de senha
 
 ## Controle de Acesso por Perfil
-- [ ] Middleware de autorização nos procedures tRPC
+- [x] Middleware de autorização nos procedures tRPC
 - [ ] Dashboard personalizado por perfil (Admin/Gerente/Corretor/Proprietário)
 - [ ] Filtros automáticos baseados no usuário logado
 - [ ] Restrição de acesso a dados sensíveis
+
+## Formulários de Cadastro
+- [x] Formulário de cadastro de leads com redes sociais
+- [x] Formulário de cadastro de corretores com redes sociais
+- [x] Formulário de cadastro de imóveis
+- [ ] Formulário de cadastro de proprietários
+- [ ] Formulário de cadastro de inquilinos
+
+## Compartilhamento em Redes Sociais
+- [x] Componente de compartilhamento de imóveis
+- [x] Integração com WhatsApp
+- [x] Integração com Instagram
+- [x] Integração com X (Twitter)
+- [x] Geração de mensagens personalizadas
+- [x] Cópia de mensagens para clipboard
 
 ## Infraestrutura e Design
 - [x] Estrutura do banco de dados

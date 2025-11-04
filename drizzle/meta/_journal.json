@@ -22,6 +22,13 @@
       "when": 1762214223389,
       "tag": "0002_even_shriek",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1762214693436,
+      "tag": "0003_known_roughhouse",
+      "breakpoints": true
     }
   ]
 }
